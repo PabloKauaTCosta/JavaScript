@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade: Hotpão</title>
+</head>
+<body>
+    <script>
+        var pao = Number(0.12), broa = Number(1.50), paovendido, broavendida, paototalvendido, broatotalvendida, totalvendido, poupanca
+
+        paovendido = Number(prompt("Quantos pães foram vendidos: "))
+        broavendida = Number(prompt("Quantas broas foram vendidas: "))
+
+        paototalvendido = pao * paovendido
+        broatotalvendida = broa * broavendida
+
+        totalvendido = paototalvendido + broa
+
+        poupanca = totalvendido * 10 / 100
+
+        alert("Hoje a venda na Hotpão nos rendeu " + totalvendido.toFixed(1))
+        alert("Vamos guardar na poupança " + poupanca.toFixed(1))
+    </script>
+</body>
+</html>
