@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS, If-else, etc.</title>
+</head>
+<body>
+        <div id="cronometro">00:00:00</div>
+        <script>
+            let startTime = new Date().getTime();
+            let timerId;
+    
+            function atualizaCronometro() {
+                let currentTime = new Date().getTime();
+                let elapsedTime = (currentTime - startTime) / 1000;
+                let hours = Math.floor(elapsedTime / 3600);
+                let minutes = Math.floor((elapsedTime % 3600) / 60);
+                let seconds = Math.floor(elapsedTime % 60);
+    
+                let formattedTime =
+                    ("0" + hours).slice(-2) + ":" +
+                    ("0" + minutes).slice(-2) + ":" +
+                    ("0" + seconds).slice(-2);
+    
+                document.getElementById("cronometro").innerText = formattedTime;
+            }
+    
+            function startTimer() {
+                startTime = new Date().getTime();
+                timerId = setInterval(atualizaCronometro, 1000);
+            }
+    
+            function stopTimer() {
+                clearInterval(timerId);
+            }
+    
+            function resetTimer() {
+                stopTimer();
+                document.getElementById("cronometro").innerText = "00:00:00";
+                startTime = new Date().getTime();
+            }
+    
+            startTimer(); // Inicia o cronômetro ao carregar a página
+        </script>
+</body>
+</html>
