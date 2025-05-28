@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniQuiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        #telaInicial {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #caixaUniQuiz {
+            display: none; 
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .answer-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        .answer-btn.correct {
+            background-color: #28a745;
+            color: white;
+        }
+        .answer-btn.incorrect {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="telaInicial">
+        <h1>Bem-vindo ao UniQuiz!</h1>
+        <p>Teste seus conhecimentos!</p>
+        <button id="botaoComecar">JOGAR</button>
+    </div>
+
+    <div id="caixaUniQuiz">
+        <h2 id="questaoUniQuiz"></h2>
+        <div id="opcoesRespostas">
+            </div>
+        <button id="botaoProximo">Próxima Questão</button>
+        <div id="resultadoUniQuiz" style="display: none;">
+            Sua pontuação: <span id="pontuacaoUniQuiz"></span>
+            <button id="botaoReiniciar" style="display: none;">Jogar Novamente</button>
+        </div>
+    </div>
+    <script src="TestandoBotao.js"></script>
+</body>
+</html>
