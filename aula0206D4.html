@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo de trabalho</title>
+</head>
+<body>
+    <script>
+       var hNormal = 10
+       var hExtra = 15
+       hNormal = Number(prompt("Horas normais: "))
+       hExtra = Number(prompt("Horas extras: "))
+       
+       salarioBruto = (hNormal * 10) + (hExtra * 15)
+       salarioLiquido = salarioBruto - (salarioBruto * 10 / 100)
+      
+       alert("Seu salário bruto é: " + salarioBruto)
+       alert("Seu salário com desconto é: " + salarioLiquido)
+    </script>
+</body>
+</html>
