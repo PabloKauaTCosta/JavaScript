@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array PT.3</title>
+</head>
+<body>
+
+    <button onclick="removerUltimo()">Remover Último</button>
+    <button onclick="removerPrimeiro()">Remover Primeiro</button>
+    <button onclick="obterNomePosicao1()">Mostrar Último</button>
+    <button onclick="tamanhoVetor()">tamanho Vetor</button>
+
+    <script>
+    do {
+        let novoNome = prompt("Digite um nome")
+        if (novoNome == 'o')
+        break
+    if (novoNome.charAt(0)=="A")
+        nomes.unshift(novoNome)
+        else
+        nomes.push(novoNome)
+    console.log(nomes);
+} while (true) 
+
+function removerUltimo() {
+    nomes.pop()
+    console.log(nomes)
+}
+
+function removerPrimeiro() {
+    nomes.shift()
+    console.log(nomes)
+}
+
+function obterNomePosicao1(){
+    alert(nomes[1])
+}
+function tamanhoVetor() {
+    alert(nomes.length())
+}
+    </script>
+</body>
+</html>

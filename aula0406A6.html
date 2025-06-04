@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array PT.2</title>
+</head>
+<body>
+    <script>
+    const nomes = []
+    do {
+        let novoNome = prompt("Digite um nome: ")
+        if (novoNome == "o")
+        break
+    if (novoNome.charAt(0)=="A")
+    nomes.unshift(novoNome)
+    else
+    nomes.push(novoNome)
+    console.log(nomes);
+    } while (true)
+
+    function removerUltimo() {
+        nomes.pop()
+        console.log(nomes)
+    }
+    </script>
+</body>
+</html>
