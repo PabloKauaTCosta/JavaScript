@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo e percentual</title>
+</head>
+<body>
+    <script>
+        var saldo = Number(prompt("Informe seu saldo"))
+        var vinte = saldo * 1.20
+        var trinta = saldo * 1.30
+        var quarenta = saldo * 1.40
+
+        if (saldo >= 1 && saldo <= 200) {
+            alert("Sem percentual")
+        } else if (saldo >= 201 && saldo <= 400) {
+            alert("Seu saldo médio é de R$" + saldo + ", então você tem um crédito total de R$" + vinte + " (+20%)")
+        } else if (saldo >= 401 && saldo <= 600) {
+            alert("Seu saldo médio é de R$" + saldo + ", então você tem um crédito total de R$" + trinta + " (+30%)")
+        } else if (saldo > 601) {
+            alert("Seu saldo médio é de R$" + saldo + ", então você tem um crédito total de R$" + quarenta + " (+40%)")
+        } else (alert("Sem saldo"))
+    </script>
+</body>
+</html>
