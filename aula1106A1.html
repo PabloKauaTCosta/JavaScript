@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While: continuação</title>
+    <style>
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer; /* Muda o cursor para mão quando o usuário passa o mouse sobre o botão */
+            border: none;
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        /* Estilo quando o botão é clicado */
+        button:active {
+            opacity: 0.8; /* Reduz a opacidade ao clicar */
+        }
+        
+        /* Estilo quando o botão é hover (o cursor passa por cima) */
+        button:hover {
+            background-color: #3e8e41; /* Verde mais escuro */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="buscarPorPosicao()">Buscar por Posição</button>
+    <button onclick="tamanhoArray()">Tamanho do Array</button>
+    <button onclick="adicionarFinal()">Adicionar no Final</button>
+    <button onclick="varrer()">Varrer</button>
+    <div id="elementosdoarray"></div>
+
+    <script>
+    const cidades = ["Palhoça","SJ","Itajaí","Brusque","Blumenau"]
+    console.log("Original: " + cidades)
+
+    function listar(meu_array) {
+        elemDiv = document.getElementById("listar")
+        conteudoHTML = ""
+        for (const cid of meu_array) {
+            conteudoHTML += `<li>6`
+        }
+    }
+    
+    function buscarPorPosicao() {
+        posicao = prompt("Escolha elemento do array")
+        alert(cidades[posicao])
+    }
+    
+    function tamanhoArray() {
+        alert(cidades.length)
+    }
+    
+    function adicionarFinal() {
+        //Guarda uma nova cidade na variável
+        novaCidade = prompt("Digite uma cidade:")
+        //PUSH adiciona elemento ao final do Array 
+        cidades.push(novaCidade)
+        //cidades[cidades.length] = novaCidade
+        console.log(cidades)
+    }
+    
+    function removerFinal() {
+        //Remove do final 
+        cidades.pop()
+        console.log(cidades)
+    }
+    
+    function varrer() {
+        elementohtml = document.getElementById("elementosdoarray")
+        var estruturaHTML = ""
+        for (cidadeDoArray of cidades) {
+            estruturaHTML += `<p> ${cidadeDoArray}</p><br>`
+        }
+        elementohtml.innerHTML= estruturaHTML
+    }
+    </script>
+</body>
+</html>
