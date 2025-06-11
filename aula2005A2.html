@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metro Quadrado</title>
-    <script src="aula2005_3.js"></script>
 </head>
 <body>
     <button type="button" onclick="metroquadrado()">Clique para saber seu metroquadrado</button>
+
+    <script>
+    metroquadrado = function(){
+        altura = prompt("Digite a altura: ")
+        comprimento = prompt("Digite o cmprimento: ")
+        metroquadrado = altura * comprimento
+        document.write("Metro quadrado = " + metroquadrado)
+    }
+    </script>
 </body>
 </html>
