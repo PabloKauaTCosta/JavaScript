@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto de gasolina</title>
+</head>
+<body>
+    <script>
+    var alcool = 4.29
+    var gasolina = 5.16
+    var litros = Number(prompt("Litros: "))
+    var com = prompt("Informe G para gasolina e A para álcool")
+    var valorTotal, desconto, valorApagar
+    
+    if (com == "G" || com == "g") {
+        valorTotal = litros * gasolina
+        if (litros <= 20) {
+            desconto = valorTotal * 4/100
+        } else{
+            desconto = valorTotal * 6/100
+        }
+    } else if (com == "A" || com == "a") {
+        valorTotal = litros * alcool
+        if(litros <= 20){
+            desconto = valorTotal * 3/100
+        } else{
+            desconto = valorApagar * 5/100
+        }
+    }
+    
+    valorApagar = valorTotal - desconto
+    alert("O valor a pagar é de" + valorApagar)
+    </script>
+</body>
+</html>

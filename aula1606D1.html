@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    </style>
+</head>
+<body>
+    <script>
+    var hVelho, hNovo, mVelha, mNova
+    var idadeHomem1 = Number(prompt("Digite a idade do homem 1: "))
+    var idadeHomem2 = Number(prompt("Digite a idade do homem 2: "))
+    var idadeMulher1 = Number(prompt("Digite a idade da mulher 1: "))
+    var idadeMulher2 = Number(prompt("Digite a idade da mulher 2: "))
+    
+    if(idadeHomem1 > idadeHomem2){
+        hVelho = idadeHomem1
+        hNovo = idadeHomem2
+    } else{
+        hVelho = idadeHomem1
+        hNovo = idadeHomem2
+    }
+    
+    if( idadeMulher1 > idadeMulher2){
+        mVelha = idadeMulher1
+        mNova = idadeMulher2
+    } else{
+        mVelha = idadeMulher2
+        mNova = idadeMulher1
+    }
+    
+    var soma = hVelho + mNova
+    var soma2 = hNovo + mVelha
+    
+    alert("A soma do homem mais velho com a mulher mais nova é: " + soma + ", E a soma do homem mais novo com a mulher mais velha é: " + soma2)
+    </script>
+</body>
+</html>
