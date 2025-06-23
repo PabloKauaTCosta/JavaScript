@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada no tobogam</title>
+</head>
+<body>
+    <script>
+        var idade = Number(prompt("Digite sua idade"))
+        var peso = Number(prompt("Digite seu peso"))
+        var altura = Number(prompt("Digite sua altura"))
+
+        if ((idade > 12) && (altura >= 1.50) && (peso >= 50) && (peso < 120)) {
+            alert("Pode entrar!")
+        } else if ((idade < 12) && (altura >= 1.50) && (peso >= 50) && (peso < 120)) {
+            alert("Não pode entrar! Não tem idade necessária.")
+        } else if ((idade > 12) && (altura < 1.50) && (peso >= 50) && (peso < 120)) {
+            alert("Não pode entrar! Não tem a altura necessária.")
+        } else if ((idade > 12) && (altura >= 1.50) && (peso < 50) && (peso < 120)) {
+            alert("Não pode entrar! Não tem o peso necessário.")
+        } else if ((idade > 12) && (altura >= 1.50) && (peso >= 50) && (peso > 120)) {
+            alert("Não pode entrar! Não tem o peso necessário.")
+        } else(alert("Não pode entrar!"))
+    </script>
+</body>
+</html>
