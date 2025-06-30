@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR: Atividade 3</title>
+</head>
+<body>
+    <script>
+        var soma = 0
+        var numEscolhido = Number(prompt("Digite o Multiplo: "))
+        var numInic = Number(prompt("Digite onde Inicia: "))
+        var numTerm = Number(prompt("Digite onde Termina: "))
+        
+        if(numTerm <= numInic) {
+            alert("O valor onde termina deve ser maior que o inicial!")
+        } else {
+            for(let num = numInic; num <= numTerm; num++) {
+                if(num % numEscolhido == 0) {
+                    soma = num + soma
+                    alert("O resultado é: " + soma)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

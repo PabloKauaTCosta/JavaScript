@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR: Atividade 1.2</title>
+</head>
+<body>
+    <script>
+        var somaPar = 0
+        var somaImpar = 0
+        var num = 0
+
+        for(let n = 1; n <= 10; n++) {
+
+            if(n % 2 == 0) {
+                somaPar = n + somaPar
+            }
+            else{
+                somaImpar = n + somaImpar
+            }
+
+            num = n + num
+        }
+
+        alert("Resultado das somas dos números pares: " + somaPar)
+        alert("Resultado das somas dos números impares: " + somaImpar)
+        alert("Resultado das somas de todos os números: " + num)
+    </script>
+</body>
+</html>
