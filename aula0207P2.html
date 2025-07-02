@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1: Calculadora de Subtrair</title>
+</head>
+<body>
+    <header>
+        <h1>Subtração</h1>
+    </header>
+    
+    <section>
+        <div class="container">
+            <p>
+                Valor 1: <br>
+                <input type="number" class="entrada" id="entrada1">
+            </p>
+            <p>
+                Valor 2: <br>
+                <input type="number" class="entrada" id="entrada2">
+            </p>
+            <p>
+                <input type="button" value="Calcular" id="botao" onclick="Calcular()">
+            </p>
+            <div id="result"></div>
+        </div>
+    </section>
+    
+    <script>
+    function Calcular() {
+        var Valor1 = document.getElementById("entrada1")
+        var Valor2 = document.getElementById("entrada2")
+        var resultado = document.getElementById("result")
+        
+        var v1 = Number(Valor1.value)
+        var v2 = Number(Valor2.value)
+        var r = v1 - v2
+        resultado.innerHTML = `${v1} - ${v2} = ${r}`
+    }
+    </script>
+</body>
+</html>

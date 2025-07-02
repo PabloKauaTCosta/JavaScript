@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 2: Contar quantos pares impares têm usando enquanto e se/senao</title>
+</head>
+<body>
+    <script>
+    let contador = 1
+    let pares = 0
+    let impares = 0
+    
+    while (contador <= 10) {
+        let numero = Number(prompt("Digite o número " + contador + ":"))
+        
+        if (!isNaN(numero)) {
+            if (numero % 2 === 0) {
+                pares++
+            } else {
+                impares++
+            }
+            contador++
+        } else {
+            alert("Digite um número válido.")
+        }
+    }
+    alert("Números pares: " + pares + "\nNúmeros ímpares: " + impares)
+    </script>
+</body>
+</html>

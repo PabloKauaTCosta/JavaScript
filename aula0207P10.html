@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 2: Peça quantas médias o usuário quer inserir e diga o resultado</title>
+</head>
+<body>
+    <script>
+        let totalNotas = Number(prompt("Quantas notas você deseja inserir?"))
+        let soma = 0
+        let contador = 1
+
+        while (contador <= totalNotas) {
+            let nota = Number(prompt("Digite a nota " + contador + ":"))
+            
+            if (nota && nota >= 0 && nota <= 10) {
+                soma += nota
+                contador++
+            } else {
+                alert("Insira uma nota entre 0 e 10.")
+            }
+        }
+
+        let media = soma / totalNotas
+        let mensagem = "Média final: " + media.toFixed(2) + ". "
+        
+        if (media >= 7) {
+            mensagem += "Aluno aprovado!"
+        } else {
+            mensagem += "Aluno reprovado!"
+        }
+
+        alert(mensagem)
+    </script>
+</body>
+</html>

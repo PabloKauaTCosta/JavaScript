@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login com Tentativas</title>
+</head>
+<body>
+    <script>
+    const usuarioCorreto = "isah"
+    const senhaCorreta = "2428"
+    
+    let tentativas = 0
+    let autenticado = false
+    
+    while (tentativas < 3 && !autenticado) {
+        let usuario = prompt("Digite o usuário:")
+        let senha = prompt("Digite a senha:")
+        
+        if (usuario === usuarioCorreto && senha === senhaCorreta) {
+            alert("Bem-vindo!")
+            autenticado = true
+        } else {
+            tentativas++
+            if (tentativas < 3) {
+                alert("Usuário ou senha incorretos. Você pode tentar mais " + (3 - tentativas) + " vezes.")
+            }
+        }
+    }
+    
+    if (!autenticado) {
+        alert("Conta bloqueada.")
+    }
+    </script>
+</body>
+</html>
