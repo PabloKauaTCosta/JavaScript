@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão: While + Break</title>
+</head>
+<body>
+    <script>
+        var entrada
+        var numeros = []
+
+        while (true) {
+            entrada = Number(prompt("Digite um número ou 0 (ZERO) para sair."))
+            if (entrada === 0) break
+
+            numeros.push(entrada)
+        }
+
+        alert("Você digitou: " + numeros)
+    </script>
+</body>
+</html>
